@@ -5,7 +5,7 @@
 
 
 
-## Write a short comment describing this function
+## cache the inverse of a matrix 
 
 makeCacheMatrix <- function(x = matrix()) {
   set <- function(y) {
@@ -21,17 +21,17 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## return a matrix that is the inverse of x
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-  inv <- x$getmean()
+  inv <- x$getinv()
   if(!is.null(inv)) {
     message("getting cached data")
     return(inv)
   }
   data <- x$get()
-  inv <- solve(data)s
+  inv <- solve(data, ...)
   x$setinv(inv)
   inv
 }
